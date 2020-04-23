@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>#DIRUMAHAJA</title>
+    <meta name="description" content="Examples for creative website header animations using Canvas and JavaScript" />
+    <meta name="keywords" content="header, canvas, animated, creative, inspiration, javascript" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.rawgit.com/mrvautin/typewrite/master/dist/typewrite.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css.css">
+    <link href="https://fonts.googleapis.com/css?family=Comic Sans MS&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comic Sans MS&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@6.1.1/dist/typeit.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            let person = prompt("tulis nama lo", "silahkan");
+            let text ='#staysafe';
+            let msg = "#homestaytokdalang";
+            let msg2 = "#dirumahaja";
+            let hapus = 40;
+           let msg3 ="gabut vroh";
+            let hapus3 = 0;
+            let hapus2 = 0;
+            var today = new Date();
+            var kk = today.getHours();
+            if (kk < 12){
+                text = "selamat pagi  "+person;
+                msg ="*gabut amjinf"
+                hapus =50;            
+
+            } 
+            if (kk >= 12){
+                text = "selamat siang "+person;
+                msg = "tetap jalani puasamu, jangan budim:v"
+                hapus = 70;
+                
+            }
+             if (kk >= 17){
+                text = "selamat sore "+person;
+                msg ="untuk para penikmat senja, *ngabuburit nya jgn disambil sama kopi:v"
+                hapus=100;
+                
+                
+            }
+
+            if (kk >= 22){
+                text = "selamat malam "+person;
+                msg ="gimans ekskul perang sarung nya malam ini?"
+                hapus= 65;
+                msg2 = "*menang apa kalah? wkwkekwk"
+                hapus2= 30;
+                
+
+            }
+
+            
+            new TypeIt("#simpleUsage", {
+                strings: [text, msg],
+                speed: 100,
+                waitUntilVisible: true,
+                deleteSpeed: 20,
+                loopDelay: 2000,
+                loop : true
+            }).go().pause(1000).pause(2000).delete(hapus).type(msg2).pause(2000).delete(hapus2).type('Stay Safe For You :)').pause(1000).delete(40).type('#dirumahaja').pause(6000).delete(40).type('Pesan ini disampaikan oleh *Bot (ajang)')
+        });
+    </script>
+    <script>
+        var hglobal;
+        function startTime() {
+            var today = new Date();
+            p="anjuing";
+             var h = today.getHours();
+             var m = today.getMinutes();
+            var s = today.getSeconds();
+            
+            h = checkTime(h);
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        
+      
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+        
+    </script>
+
+</head>
+
+<body onload="startTime()">
+    <div class="container demo-1">
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <canvas id="demo-canvas"></canvas>
+                <div class="main-title">
+
+                    <p id="simpleUsage" class="text"></p>
+                </div>
+                <div class="main-title naik">
+                    <p id="txt" class="jam"></p>
+                </div>
+
+            </div>
+            <!-- <div class="codrops-top clearfix">
+					<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/OffCanvasMenuEffects/"><span>Previous Demo</span></a>
+					<a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=20153"><span>Back to the Codrops Article</span></a>
+				</div>
+				<div class="codrops-header">
+					<h1>Animated Background Headers <span>Examples for creative website header animations using Canvas and JavaScript</span></h1>
+					<nav class="codrops-demos">
+						<a class="current-demo" href="index.html">Demo 1</a>
+						<a href="index2.html">Demo 2</a>
+						<a href="index3.html">Demo 3</a>
+						<a href="index4.html">Demo 4</a>
+					</nav>
+				</div>
+			</div> -->
+            <!-- Related demos -->
+            <!-- <section class="related">
+				<p>If you enjoyed this demo you might also like:</p>
+				<a href="http://tympanus.net/Development/HeaderEffects/">
+					<img src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/uploads/2013/07/HeaderEffects-300x162.jpg" />
+					<h3>On Scroll Header Effects</h3>
+				</a>
+				<a href="http://tympanus.net/Development/ArticleIntroEffects/">
+					<img src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/uploads/2014/05/ArticleIntroEffects-300x162.png" />
+					<h3>Inspiration for Article Intro Effects</h3>
+				</a>
+			</section> -->
+            <!-- <p class="ref">Image credits: <a href="http://www.eso.org/public/images/eso1205a/">ESO/VISTA/J. Emerson. Acknowledgment: Cambridge Astronomical Survey Unit</a></p> -->
+        </div><!-- /container -->
+        <script src="js/TweenLite.min.js"></script>
+        <script src="js/EasePack.min.js"></script>
+        <script src="js/rAF.js"></script>
+        <script src="js/demo-1.js"></script>
+        <audio src="y2mate.com - DJ RAMADAN TIBA FULL REMIX_sxiCa2zIi18.mp3" controls autoplay loop ></audio>
+</body>
+
+</html>
