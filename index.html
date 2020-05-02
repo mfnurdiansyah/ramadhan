@@ -26,7 +26,7 @@
     <script>
         $(document).ready(function () {
             
-            let person = prompt("tulis nama lo", "silahkan");
+            let person = prompt("Kata ajang disuruh ketik nama", "disini");
             let text ='#staysafe';
             let msg = "#tahantahan";
             let msg2 = "#dirumahaja";
@@ -37,20 +37,20 @@
             var today = new Date();
             var kk = today.getHours();
             if (kk < 12){
-                text = "selamat pagi  "+person;
+                text = "p  "+person;
                 msg ="*vervuru uvur uvur"
                 hapus =50;            
 
             } 
             if (kk >= 12){
                 text = "selamat siang "+person;
-                msg = "tetap jalani puasamu, jangan budim:v"
+                msg = "tetap jalani puasamu, jangan budim komtop"
                 hapus = 70;
                 
             }
-             if (kk >= 17){
+             if (kk >= 16){
                 text = "selamat sore "+person;
-                msg ="untuk para penikmat senja, *ngabuburit nya jgn disambil sama kopi:v"
+                msg ="untuk para penikmat senja, *ngabuburit nya jgn disambil sama kopi"
                 hapus=100;
                 
                 
@@ -58,10 +58,9 @@
 
             if (kk >= 22){
                 text = "selamat malam "+person;
-                msg ="gimans ekskul perang sarung nya malam ini?"
+                msg ="malam malam malam sudah malam?"
                 hapus= 65;
-                msg2 = "*menang apa kalah? wkwkekwk"
-                hapus2= 50;
+                
                 
 
             }
